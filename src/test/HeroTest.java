@@ -28,4 +28,9 @@ public class HeroTest {
     assertEquals(22, firstHero.getAge());
   }
 
+  @Test
+    public void getHeroSuperPower_String() {
+      assertEquals("Flying", firstHero.getPower());
+    }
+
 }

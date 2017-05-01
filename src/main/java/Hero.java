@@ -24,4 +24,10 @@ public class Hero {
   public String getName() {
     return mName;
   }
+  public int getAge() {
+  return mAge;
+  }
+  public String getPower() {
+    return mPower;
+  }
 }
