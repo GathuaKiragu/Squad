@@ -25,9 +25,12 @@ public class Hero {
     return mName;
   }
   public int getAge() {
-  return mAge;
+    return mAge;
   }
   public String getPower() {
     return mPower;
+  }
+  public String getWeakness() {
+    return mWeakness;
   }
 }

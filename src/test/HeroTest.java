@@ -27,10 +27,15 @@ public class HeroTest {
   public void getHeroAgeAndReturn_int() {
     assertEquals(22, firstHero.getAge());
   }
-
+// Test to check if we can get Hero Super power
   @Test
     public void getHeroSuperPower_String() {
       assertEquals("Flying", firstHero.getPower());
     }
+// Test to check if we can get Hero Weakness from the user
+  @Test
+  public void getWeakness_returnsWeakness_String() {
+    assertEquals("Cryptonite", firstHero.getWeakness());
+}
 
 }
