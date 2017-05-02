@@ -23,16 +23,22 @@ public class App {
       return new ModelAndView(model, layout);
     }, new VelocityTemplateEngine());
 
-    get("/squad-list", (request, response) -> {
+    get("/squad-registration-form", (request, response) -> {
     Map<String, Object> model = new HashMap<String, Object>();
-    if(Squad.all().size() > 0) {
-      model.put("squadList", Squad.all());
-    } else {
-      model.put("squadList", false);
-    }
-    model.put("template", "templates/squad-list.vtl");
+    model.put("template", "templates/squad-registration-form.vtl");
     return new ModelAndView(model, layout);
   }, new VelocityTemplateEngine());
+
+  //   get("/squad-list", (request, response) -> {
+  //   Map<String, Object> model = new HashMap<String, Object>();
+  //   if(Squad.all().size() > 0) {
+  //     model.put("squadList", Squad.all());
+  //   } else {
+  //     model.put("squadList", false);
+  //   }
+  //   model.put("template", "templates/squad-list.vtl");
+  //   return new ModelAndView(model, layout);
+  // }, new VelocityTemplateEngine());
 
     post("/success", (request, response) -> {
           Map<String, Object> model = new HashMap<String, Object>();
