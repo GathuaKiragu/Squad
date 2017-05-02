@@ -45,5 +45,3 @@ public void Squad_getName_String(){
   }
 
 }
-
-}
