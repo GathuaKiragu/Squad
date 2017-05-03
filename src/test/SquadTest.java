@@ -25,7 +25,7 @@ public void Squad_getName_String(){
   @Test
   public void Squad_getPassion_String(){
     Squad firstSquad = new Squad("Moringa Team");
-    assertEquals("raising awareness about windowWashing", firstSquad.getPassion());
+    assertEquals("raising awareness about coding", firstSquad.getPassion());
   }
 
   @Test

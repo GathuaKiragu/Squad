@@ -4,15 +4,15 @@ import java.util.ArrayList;
 public class Squad {
   private int mSize;
   private String mName;
-  private String mPassion;
+  private String mDedication;
   private static List<Squad> instances = new ArrayList<Squad>();
   private int mId;
   private List<Hero> mHeroes;
 
-public Squad(int size, String name, String passion) {
+public Squad(int size, String name, String dedication) {
   mSize = size;
   mName = name;
-  mPassion = passion;
+  mDedication = dedication;
   instances.add(this);
   mId = instances.size();
   mHeroes = new ArrayList<Hero>();

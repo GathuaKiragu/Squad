@@ -2,7 +2,7 @@
 #if(!$squadList)
   <h4>There Are Currently No Availble Squads</h4>
 #else
-  <form action="/final-page" method="post">
+  <form action="/final" method="post">
     #foreach($squad.getName() in $squadList)
       <p class="squads">
         <label for=$squad.getName()>
