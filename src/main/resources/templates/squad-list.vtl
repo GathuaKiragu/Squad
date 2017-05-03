@@ -1,0 +1,17 @@
+<h1>Join A Squad!</h1>
+#if(!$squadList)
+  <h4>There Are Currently No Availble Squads</h4>
+#else
+  <form action="/final-page" method="post">
+    #foreach($squad.getName() in $squadList)
+      <p class="squads">
+        <label for=$squad.getName()>
+        <input type="checkbox" name="squadSelect" value=$squad.getId()>
+          $squad.getName()
+        </label>
+      </p>
+    #end
+    <button type="submit" class="btn btn-default">Join Squad!</button>
+  </form>
+#end
+<a href="/squad-registration-form">CREATE SQUAD</a>
