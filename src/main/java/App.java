@@ -50,7 +50,7 @@ public class App {
     return new ModelAndView(model, layout);
   }, new VelocityTemplateEngine());
 
-  post("/final", (request, response) -> {
+  post("/final-page", (request, response) -> {
    Map<String, Object> model = new HashMap<String, Object>();
    int selectedSquadId = Integer.parseInt(request.queryParams("squadSelect"));
    Squad.find(selectedSquadId).addHero(request.session().attribute("newHero"));
