@@ -8,7 +8,7 @@ public class Squad {
   private static List<Squad> instances = new ArrayList<Squad>();
   private int mId;
   private List<Hero> mHeroes;
-
+// squad constructor
 public Squad(int size, String name, String dedication) {
   mSize = size;
   mName = name;

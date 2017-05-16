@@ -8,7 +8,7 @@ public class Hero {
   private String mWeakness;
   private static List<Hero> instances = new ArrayList<Hero>();
   private int mId;
-
+// Hero Constructor
   public Hero(String name, int age, String power, String weakness) {
     mName = name;
     mAge = age;
@@ -20,19 +20,23 @@ public class Hero {
   public static void clear(){
     instances.clear();
   }
-
+// getter method to get the hero name
   public String getName() {
     return mName;
   }
+  // getter method to get the hero age
   public int getAge() {
     return mAge;
   }
+  // getter method to get power
   public String getPower() {
     return mPower;
   }
+  // getter method to get hero weakness
   public String getWeakness() {
     return mWeakness;
   }
+  // method to return all instances of hero
   public static List<Hero> all() {
     return instances;
   }

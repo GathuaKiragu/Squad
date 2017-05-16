@@ -6,6 +6,7 @@ import spark.template.velocity.VelocityTemplateEngine;
 import static spark.Spark.*;
 
 public class App {
+  // setting port for deployment
   public static void main(String[] args) {
     staticFileLocation("/public");
     String layout = "templates/layout.vtl";
@@ -25,7 +26,7 @@ public class App {
       return new ModelAndView(model, layout);
     }, new VelocityTemplateEngine());
 
-
+// route to display hero_registrationform
     get("/hero_registrationform", (request, response) -> {
       Map<String, Object> model = new HashMap<String, Object>();
       model.put("template", "templates/hero_registrationform.vtl");
@@ -37,7 +38,7 @@ public class App {
     model.put("template", "templates/squad-registration-form.vtl");
     return new ModelAndView(model, layout);
   }, new VelocityTemplateEngine());
-
+// route to display
     get("/squad-list", (request, response) -> {
     Map<String, Object> model = new HashMap<String, Object>();
     if(Squad.all().size() > 0) {
@@ -49,6 +50,7 @@ public class App {
     return new ModelAndView(model, layout);
   }, new VelocityTemplateEngine());
 
+// route to display  squads
   post("/final-page", (request, response) -> {
    Map<String, Object> model = new HashMap<String, Object>();
    int size = Integer.parseInt(request.queryParams("size"));
@@ -60,7 +62,7 @@ public class App {
    model.put("template", "templates/final-page.vtl");
    return new ModelAndView(model, layout);
    }, new VelocityTemplateEngine());
-
+// success page
   post("/success", (request, response) -> {
           Map<String, Object> model = new HashMap<String, Object>();
           String name = request.queryParams("name");
