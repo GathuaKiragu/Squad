@@ -17,6 +17,7 @@ public class Hero {
     instances.add(this);
     mId = instances.size();
   }
+  // method to clear all instances of Hero
   public static void clear(){
     instances.clear();
   }
