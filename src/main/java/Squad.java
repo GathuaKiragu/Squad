@@ -17,17 +17,19 @@ public Squad(int size, String name, String dedication) {
   mId = instances.size();
   mHeroes = new ArrayList<Hero>();
 }
-
+// getter method to get the size of the squad
 public int getSize(){
   return mSize;
   }
+// method to get name
 public String getName(){
     return mName;
   }
-  public String getPassion(){
-    return mPassion;
+// method to get Dedication
+  public String getDedication(){
+    return mDedication;
   }
-
+// method to get squadID`
   public int getId() {
     return mId;
   }
@@ -35,7 +37,7 @@ public String getName(){
   public List<Hero> getHeroes() {
     return mHeroes;
   }
-
+// method to clear all instances of squad
   public static void clear() {
     instances.clear();
   }
@@ -43,11 +45,11 @@ public String getName(){
   public static List<Squad> all() {
     return instances;
   }
-
+// method to find squad
   public static Squad find(int id) {
     return instances.get(id - 1);
   }
-
+// method to add hero to squad
   public void addHero(Hero hero) {
     mHeroes.add(hero);
   }
